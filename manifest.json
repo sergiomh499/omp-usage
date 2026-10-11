@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "sergiomh499.omp-usage",
+  "name": "OMP Usage",
+  "version": "1.0.0",
+  "author": "Sergio",
+  "license": "MIT",
+  "description": "Live provider plan/quota usage and today's token burn from Oh My Pi (omp usage) in the Omarchy bar.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Usage.qml"
+  },
+  "barWidget": {
+    "displayName": "OMP Usage",
+    "description": "Shows plan/quota consumption for every OMP-authenticated provider plus today's token burn (omp usage + omp stats.db).",
+    "category": "AI",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshSec": 60
+    },
+    "schema": [
+      {
+        "key": "refreshSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 30,
+        "max": 3600,
+        "step": 30,
+        "defaultValue": 60
+      }
+    ]
+  }
+}
